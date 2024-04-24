@@ -1,0 +1,6 @@
+PySide6 
+PyQtGraph 
+networkx 
+numpy 
+pandas 
+matplotlib
