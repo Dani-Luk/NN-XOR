@@ -741,8 +741,10 @@ class MainWindowXOR(QMainWindow):
             # msgAbout = FadingMessageBox("About", "<p style='font-size:15px'> What about? 😄 </p", 
             #                             2400, self, QMessageBox.Question)
             htmlText = """<p style='font-size:15px; font-style: italic; text-align: right;'> 
+
                         \"I'm a joker, I'm a smoker, I'm a midnight toker ...\" <br>
-                        <a href='https://www.youtube.com/watch?v=dV3AziKTBUo'> Steve Miller Band - The Joker</a> &nbsp; &nbsp; 
+                        <a href='https://www.youtube.com/watch?v=dV3AziKTBUo'> Steve Miller Band - The Joker (Official Music Video)</a> &nbsp; &nbsp; <br>
+                        or <a href='https://www.youtube.com/watch?v=hqU11H9_Wqo'> the cute cats version</a>🐱 &nbsp; &nbsp; 
                         </p>"""
             msgAbout = FadingMessageBox("About", htmlText, 3380, self, QMessageBox.Information) # 3:38 is the duration of the song :D
             msgAbout.show() # how many can you open ? :D

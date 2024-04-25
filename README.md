@@ -96,7 +96,7 @@ python -m main
 
 ## 3. Final words
 ___
-Try to figure out when a starting position is ("very likely") to yield a solution (or how to hijack the trajectory towards :D)
+Try to figure out when a starting position is "very likely" to yield a solution (or how to hijack the trajectory towards :D)
 
 
 ## 4. License 
