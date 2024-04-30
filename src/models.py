@@ -1007,7 +1007,8 @@ class XOR_array_model:
         """ Fill the model with the training process based on the XOR_Slice"""
         # if fromTP.index == 0, initialize the rng with exactly the seed from fromTP, 
         # otherwise add the seed to the index to avoid repeating the same random numbers(and therefore the distribution) into the next epoch
-        print("fillModel fromTP.index:", fromTP.index)
+        
+        # print("fillModel fromTP.index:", fromTP.index)
         rng = np.random.default_rng( fromTP.index + (fromTP.seedTP if fromTP.seedTP >= 0 else 0))
         epoch_size = fromTP.epoch_size
 
@@ -1234,7 +1235,7 @@ class XOR_model(QObject):
 
         self.fillModelFromTP(seedTP)
 
-        self.destroyed.connect(lambda obj: print("destroyed : ", id(obj)))
+        # self.destroyed.connect(lambda obj: print("destroyed : ", id(obj)))
 
 # endregion init
 

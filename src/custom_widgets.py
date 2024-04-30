@@ -400,7 +400,6 @@ if __name__ == "__main__":
             for i in range(maxInner):
                 # sleep(0.0001)
                 gApp.processEvents()
-                # print(i)
                 innerProgress.setValue(i)
         
         innerProgress.close()

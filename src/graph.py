@@ -194,7 +194,7 @@ class Graph(QWidget):
         self.canvas.figure.subplots_adjust(0, 0, 1, 1)
         self.ax.figure.canvas.draw()        
         
-        print("graph __drawUpdated elapsed:", timer.elapsed(), '\n')
+        # print("graph __drawUpdated elapsed:", timer.elapsed(), '\n')
 
     def setValues(self, *args):
         """

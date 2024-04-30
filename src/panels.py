@@ -951,15 +951,10 @@ class WxPanel(QFrame):
         timer = QElapsedTimer() 
         timer.start()
 
-        print(f'WxPanel Set_XOR_item(i, item) = (pos={i}, id(item)={id(item)}  ... item.index = {item.index}')
         if i != item.index : # aka VirtualValue >= count
             item = XOR_Slice(-1) 
         self.crtXOR_Slice = item
 
-        print("Set_XOR_item id id(self.xorModel.getCrtTPModel()), id(item) ", 
-              id(self.xorModel.getCrtTPModel().getTP()), id(item))
-        
-        # self.blockSignals(True) TODO: WHY ?!
 
         self.W1_model.blockSignals(True)
         self.W1_bias_1_model.blockSignals(True)
@@ -1006,7 +1001,7 @@ class WxPanel(QFrame):
         self._x00_model.blockSignals(False)
 
         self.refresh() 
-        print('DONE! WxPanels Set_XOR_item for pos = ', i, ' duration =', timer.elapsed())
+        # print('DONE! WxPanels Set_XOR_item for pos = ', i, ' duration =', timer.elapsed())
     # end Set_XOR_item
 
 # end class WxPanel
@@ -1171,8 +1166,8 @@ class SliderPanel(QWidget):
             self.redrawTimer = QTimer(self)
             self.redrawTimer.setSingleShot(True)
             def _emitsigSliceChanged():
-                 print("_emitsigSliceChanged self.slider.virtualValue() / epoch_size", 
-                       self.slider.getVirtualValue(), self.slotGetCrtSlice().epoch_size)
+                #  print("_emitsigSliceChanged self.slider.virtualValue() / epoch_size", 
+                #        self.slider.getVirtualValue(), self.slotGetCrtSlice().epoch_size)
                  self.sigSliceChanged.emit(self.slider.getVirtualValue(), self.slotGetCrtSlice())
             self.redrawTimer.timeout.connect(_emitsigSliceChanged)
             self.redrawTimer.start(self.EMIT_MIN_TIME)

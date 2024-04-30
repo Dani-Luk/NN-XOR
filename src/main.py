@@ -854,7 +854,7 @@ class MainWindowXOR(QMainWindow):
         self.matrixPanel.Set_XOR_item(self.mXORmodel.getCrtSlice().index, self.mXORmodel.getCrtSlice()) 
 
     def setCrtModel(self, model:XOR_model):
-        print('MainWindow setCrtModel', id(model))
+        # print('MainWindow setCrtModel', id(model))
         if self.mXORmodel is model:
             print('same model, Tab moved, do nothing')
             return

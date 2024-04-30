@@ -1011,7 +1011,7 @@ class ControlPanel(QTabWidget):
 
     # Private method to fill the combo box with turning points
     def _fillCboTP(self):
-        print("_fillCboTP")
+        # print("_fillCboTP")
         lstTP = self.mXORmodel.lstTurningPoints
         if len(lstTP) == 0:
             return
