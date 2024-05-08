@@ -71,8 +71,8 @@ from PySide6.QtWidgets import QApplication, QStyle
 
 def save_icon_as_ico(icon_size=(16, 16), output_file='arrow_right_16.ico', qStyleIcon = QStyle.SP_ArrowRight):
     path = os.path.abspath(os.path.join(os.path.dirname(__file__), "img_md", output_file))
-    # Create a QIcon with the standard arrow right icon
 
+    # Create a QIcon with the standard arrow right icon
     icon = gApp.style().standardIcon(qStyleIcon)
 
     # Obtain the standard pixmap for the icon (scaled to desired size)
