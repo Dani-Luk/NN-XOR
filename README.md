@@ -15,7 +15,7 @@ Even the goals?! (You know, all your childhood your (grand)parents teach you wha
 And what if some experiences (i.e. the training samples) are not uniformly distributed, favoring some of them, like in the real world.  
 Well, that's interesting. And could be kind of funny, too.   
 So, *I think to myself* [<sup>(2)</sup>](#2-louis-armstrong---what-a-wonderful-world-httpswwwyoutubecomwatchvvqhcqzah4vs "Louis Armstrong - What A Wonderful World") 
-... have to see that! In a Qt("cute") way 😉
+... have to see that! In a [Qt](https://en.wikipedia.org/wiki/Qt_(software))("cute") way 😉
 
 
 ## 1. Description 
