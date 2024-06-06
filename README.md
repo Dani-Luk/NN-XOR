@@ -109,6 +109,8 @@ ___
 ##### 2. Louis Armstrong - What A Wonderful World: [https://www.youtube.com/watch?v=VqhCQZaH4Vs](https://www.youtube.com/watch?v=VqhCQZaH4Vs)
 <a name="2-louis-armstrong---what-a-wonderful-world-httpswwwyoutubecomwatchvvqhcqzah4vs"></a>  
 
+##### 3. The NN-XOR study, in motion: [https://www.youtube.com/watch?v=5CNkplPwkKM](https://www.youtube.com/watch?v=5CNkplPwkKM)
+
 [100%]: readme.img/main_100.png
 [80%]: readme.img/main_80.png
 [CP_GP]: readme.img/CP_GlobalParams.png
