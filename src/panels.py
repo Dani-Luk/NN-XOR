@@ -1308,27 +1308,28 @@ class z1a1z2Panel(QFrame):
     
     def setSelectedOperation(self, ix:int):
         """ set the selected operation, and update the corresponding UI infos"""
-        self._ix = ix
         if ix < 0 :
-            # obsolete...
-            assert False, "ix < 0"
-        else :
-            am = self._arrayModel
-            
-            self.plot_z1_Single.updateSeries(am.z1[:, ix, 0], am.z1[:, ix, 1])
-            self.plot_z1_Single.setTurningPoints(self._tp_indexes_list)
-            self.plot_z1_Pairs.updateSeries((am.z1[:, ix, 0], am.z1[:, ix, 1]))
-            self.plot_z1_Pairs.setTurningPoints(self._tp_indexes_list)
+            # obsolete...???
+            print('warning "ix < 0 !?" in setSelectedOperation in z1a1z2Panel')
+            ix = 0
 
-            self.plot_a1_Single.updateSeries(am.a1[:, ix, 0], am.a1[:, ix, 1])
-            self.plot_a1_Single.setTurningPoints(self._tp_indexes_list)
-            self.plot_a1_Pairs.updateSeries((am.a1[:, ix, 0], am.a1[:, ix, 1]))
-            self.plot_a1_Pairs.setTurningPoints(self._tp_indexes_list)
+        self._ix = ix
+        am = self._arrayModel
+        
+        self.plot_z1_Single.updateSeries(am.z1[:, ix, 0], am.z1[:, ix, 1])
+        self.plot_z1_Single.setTurningPoints(self._tp_indexes_list)
+        self.plot_z1_Pairs.updateSeries((am.z1[:, ix, 0], am.z1[:, ix, 1]))
+        self.plot_z1_Pairs.setTurningPoints(self._tp_indexes_list)
 
-            self.plot_z2_Single.updateSeries(am.z2[:, ix, 0])
-            self.plot_z2_Single.setTurningPoints(self._tp_indexes_list)
-            self.plot_a2_Single.updateSeries((am.y_aka_a2[:, ix, 0]))
-            self.plot_a2_Single.setTurningPoints(self._tp_indexes_list)
+        self.plot_a1_Single.updateSeries(am.a1[:, ix, 0], am.a1[:, ix, 1])
+        self.plot_a1_Single.setTurningPoints(self._tp_indexes_list)
+        self.plot_a1_Pairs.updateSeries((am.a1[:, ix, 0], am.a1[:, ix, 1]))
+        self.plot_a1_Pairs.setTurningPoints(self._tp_indexes_list)
+
+        self.plot_z2_Single.updateSeries(am.z2[:, ix, 0])
+        self.plot_z2_Single.setTurningPoints(self._tp_indexes_list)
+        self.plot_a2_Single.updateSeries((am.y_aka_a2[:, ix, 0]))
+        self.plot_a2_Single.setTurningPoints(self._tp_indexes_list)
 # end class z1a1z2Panel
             
 class panel_W1_HalfPlanes(Dock_Colored):

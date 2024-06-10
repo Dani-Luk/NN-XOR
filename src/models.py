@@ -171,7 +171,10 @@ class MatrixWithMaskAndColoredHeaderModel(QAbstractTableModel):
             case Qt.ItemDataRole.ForegroundRole:
                 return QColor("black")
             case Qt.ToolTipRole:
-                return "%.10f" % self._data.iloc[index.row(), index.column()]
+                if isinstance(self._data.iloc[index.row(), index.column()], np.floating):
+                    return "%.10f" % self._data.iloc[index.row(), index.column()]
+                else:
+                    return self._data.iloc[index.row(), index.column()]
         return None
 
     def setData(self, index, value, role=Qt.ItemDataRole.EditRole):
@@ -588,21 +591,21 @@ class XOR_Slice:
             self.minRange = 0
             self.maxRange = 0
             self.w1 = np.zeros(shape=(3, 2))  # 3-th row = b1
-            self.w1_lock = np.zeros(shape=(3, 2))
+            self.w1_lock = np.zeros(shape=(3, 2), dtype=np.int32)
             self.a1 = np.zeros(shape=(4, 2))
             self.z1 = np.zeros(shape=(4, 2))
             self.w2 = np.zeros(shape=(3, 1))
-            self.w2_lock = np.zeros(shape=(3, 1))
+            self.w2_lock = np.zeros(shape=(3, 1), dtype=np.int32)
             self.z2 = np.zeros(shape=(4, 1))
             self.y_aka_a2 = np.zeros(shape=(4, 1))
             self.lossAvg = np.ones(shape=(1, 1))
             self.lossPerX = np.ones(shape=(4, 1))
         else:
             self.w1 = np.zeros(shape=(3, 2))
-            self.w1_lock = np.zeros(shape=(3, 2))
+            self.w1_lock = np.zeros(shape=(3, 2), dtype=np.int32)
             self.z1 = np.zeros(shape=(4, 2))
             self.a1 = np.zeros(shape=(4, 2))
-            self.w2 = np.zeros(shape=(3, 1))
+            self.w2 = np.zeros(shape=(3, 1), dtype=np.int32)
             self.w2_lock = np.zeros(shape=(3, 1))
             self.z2 = np.zeros(shape=(4, 1))
             self.y_aka_a2 = np.zeros(shape=(4, 1))
@@ -779,7 +782,7 @@ class XOR_Slice:
 
         lstDiff = []
         if slice2 :
-            lstDiff += ['· slice2% distribution'] if (slice1.xPercents.round(3) != slice2.xPercents.round(3)).any() else []
+            lstDiff += ['· % distribution'] if (slice1.xPercents.round(3) != slice2.xPercents.round(3)).any() else []
 
             lstDiff += ["· '=' yTrue"] if (slice1.yParam.round(3) != slice2.yParam.round(3)).any() else []
 
